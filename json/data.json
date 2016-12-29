@@ -1,0 +1,17 @@
+{   "faculty": [ "Almudena" , "Susan" , "Ellen" ],  
+    
+    
+    "students": [   { "FirstName" : "A" , "LastName" : "K"}, 
+                    { "FirstName" : "B" , "LastName" : "K"}, 
+                    { "FirstName" : "C" , "LastName" : "K"}   ],
+                    
+                    
+    "courses":  [   { "Number" : "cs186" , "Name" : "Web"}, 
+                    { "Number" : "cs170" , "Name" : "Rails"}, 
+                    { "Number" : "cs133" , "Name" : "Security"} ] , 
+                    
+    "department" : "MCS",
+    "institution" : "Mills"
+    
+}
+
