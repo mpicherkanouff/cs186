@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <script>
+            var students = ["Dani", "Olivia", "Monica", "Spencer", "James"];
+            var response, count=0;
+            
+            for (var index in students) {
+                response = confirm("Is " + students[index] + " in your class? "
+                                    +"?");   
+                if (response) count++;
+            }
+            document.write("You have " + count + " students! <br>");
+            
+        </script>
+
+        <script>
+            var response, count = 0;
+            var onePerson = { initials:"BG", age:40, job:"lawyer" };
+            
+            for (var property in onePerson) {
+                document.write(property + "=" + onePerson[property] + " ");
+            }
+        </script>
+    
+    </head>
+</html>

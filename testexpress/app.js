@@ -6,7 +6,6 @@ console.log('Hello world');
 // require module
 var express = require('express');
 
-
 // for routes 
 var routes = require('./app_server/routes/index');
 

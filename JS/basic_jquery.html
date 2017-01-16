@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+    $("p").click(function(){      // this is a callback function, passed as parameter
+        $(this).hide();
+    });
+
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "yellow");
+        }, 
+        mouseleave: function(){
+            $(this).css("background-color", "blue");
+        }
+    });
+    
+    $("button").click(function(){
+        $("#mytext").load("../json/data.json");
+    });
+        
+});
+
+</script>
+</head>
+
+<body style=" text-align: center; font-size:28px">
+
+<p>Click me!!</p>
+<p>Click me away!!</p>
+<p>Click me too!!</p>
+
+<button>Read json file</button>
+
+<div id="mytext">     </div>
+
+
+</body>
+</html>

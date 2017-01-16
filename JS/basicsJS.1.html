@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Learning </title>
+        
+    </head>
+    <body onload="greet_the_user()">
+        
+        <script>
+            // recursive function 
+            alert("It's my " + build_great(5) + "grandmother!");
+
+            function build_great( depth ) {
+                if (depth > 0)
+                    return "great " + build_great( depth - 1 );
+                else
+                    return "";
+            }
+        </script>
+        
+        <script>
+        // switch 
+        var user_name = prompt("What is my son's name?");
+
+        switch(user_name) {
+            case "Michael":
+                alert("Oldest son"); 
+                break;
+            case "Brandon":
+                alert("Middle son"); 
+                break;
+            case "Dylan":
+                alert("Youngest son");
+                break;
+            default:
+                alert("not mine ...");
+        }
+        </script>
+        
+    </body>
+</html>

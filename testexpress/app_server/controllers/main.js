@@ -9,4 +9,8 @@ module.exports.index = function(req, res){
     res.render('index.jade', { title: 'Express' });
 };
 
+module.exports.testing = function(req, res){
+    //console.log(req.method, req.url);
+    res.render('testingBoot.jade', { title: 'Testing' });
+};
 

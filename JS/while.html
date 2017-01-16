@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Learning </title>
+        <script>
+            var gotit = false;
+            
+            while (!gotit){
+                age=prompt("How old am I?");  
+                if (age >=40)  {
+                    gotit = true;
+                    document.write("Ok close enough to my age")
+                    
+                }
+            }
+            var finished=false;
+            
+            do {
+                name=prompt("What is my son's name ? ");  
+                if (name == "Michael" || name == "Brandon" || name =="Dylan"){  
+                    finished=true;
+                    document.write("You got it, that is my son!!");
+                }
+            } while (!finished);
+        </script>
+    </head>
+</html>

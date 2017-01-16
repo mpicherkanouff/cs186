@@ -1,0 +1,28 @@
+<html>
+
+ <!-- This page displays a lucky number at the click of a button. --> 
+ <!-- =========================================================== -->
+
+ <head>
+   <title> Double The Number </title>
+ </head>
+
+ <body>
+   <div style="text-align:center">
+     <h2>Double The Number</h2>
+ 
+     
+     <input type="button" 
+            value="Double the Number"            
+            onclick="  num = document.getElementById('number').value;
+                       
+                    			num = parseFloat(num);
+                    			num = num*2;
+                    			
+                    			document.getElementById('number').value = num; " > 
+				   
+	    <input type="text" name="number" id="number" size="20" >			   
+			   
+   </div>
+ </body>
+</html>

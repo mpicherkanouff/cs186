@@ -12,4 +12,7 @@ var ctrlMain = require('../controllers/main');
 // or     
 router.get('/', ctrlMain.index);
 
+//testing route 
+router.get('/testing', ctrlMain.testing);
+
 module.exports = router;

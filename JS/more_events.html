@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Learning Events </title>
+        <script> 
+            function change_color( newC ) {
+              document.getElementsByTagName("body")[0].style.backgroundColor = newC;
+            }  
+        </script>
+        
+    </head>
+    
+    <body onload="change_color('powderblue')" >
+        
+        <div id="myDiv"
+             style="background:yellow; font-size:20pt"
+             onmouseover="change_color('red');"
+             onmouseout="change_color('yellow');">
+            Move your mouse over this div ... then move it out...
+        </div>
+    </body>
+</html>

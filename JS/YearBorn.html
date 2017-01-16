@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+ <!-- This page displays the year a person was born based on her age . --> 
+ <!-- ================================================================ -->
+
+ <head>
+   <title> Estimate year of Birth!!  </title>
+   <script type="text/javascript"  src="random.js"> </script>
+   <script> 
+     function DoMath(E) {
+        var r; 
+        r = 2017 - E; 
+        return r; 
+        }
+   </script>	
+ </head>
+
+ <body>
+   <div style="text-align:center">
+        <h2>Tell me the Age, I give you the Year </h2>
+ 
+        Enter Full Name:
+        <input type="text" id="name" size="20" >	
+     
+        Enter an Age:
+        <input type="text" id="age" size="12"  >	
+ 
+ 
+        <input type="button" 
+           value="Click Here"            
+           onClick=" 
+           year = document.getElementById('age').value;
+           year = parseFloat(year);     
+           year = DoMath(year);
+           
+           name =  document.getElementById('name').value;
+           document.getElementById('PlaceHolder').innerHTML = 
+           
+                'Hello there ' + name + ' was born between' + (year -1) + ' and ' + year ;
+          " > 
+        
+           
+	
+	    <hr> 	   
+        <div id="PlaceHolder">    </div> 
+         
+   </div>
+ </body>
+</html>

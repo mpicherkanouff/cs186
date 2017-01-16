@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Testing the DOM!  </title>
+</head>
+
+<body style="background-color:powderblue;">
+    
+<p id="mytext" style="color:blue">This is a testing web site!</p>
+
+<input type="button" 
+           value="Change text color"            
+           onClick=" 
+              document.getElementById('mytext').style.color = 'red';   
+            " >
+     
+              
+<input type="button" 
+           value="Change background color"            
+           onClick=" 
+              var x = document.getElementsByTagName('body')[0];
+              x.style.backgroundColor = 'yellow';   
+            " >
+                            
+
+</body>
+</html>

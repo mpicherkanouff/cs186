@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+ <head>
+   <title> Lucky1 </title>
+   <script type="text/javascript" src="random.js">
+   </script>
+
+ </head>
+
+ <body>
+     
+     <form name="LuckyForm" >    
+       
+       <input type="button" 
+              value="Click Here for Lucky Number"            
+              onClick=" luckyNum = RandomInt(1, 100);
+
+                document.getElementById('TheLuckyNumber').value = luckyNum;  "
+                                  
+       />
+             
+       <br><br><hr><br>
+          
+       Your lucky number is: 
+       <input type="text" name="TheLuckyNumber" id="TheLuckyNumber" size="4" value="" />
+     </form>
+  
+
+  </body>
+</html>

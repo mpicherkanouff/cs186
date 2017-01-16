@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modifying The DOM</title>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>Adding and removing DOM Elements </h2>
+    
+    <p id="smilep"> <button id="smile"> I am happy today</button>   </p>
+    
+    <p>
+      <button id='rem_s'> Remove the silly image above</button>
+      <button id='add_s'> Add a silly image above</button>
+      <button id='rem_q'>     Empty the quote below </button>
+      <button id='add_q'>     Add the quote below </button>
+    </p>
+    
+    <p> A Silly Image: </p>
+    <div id="mydiv"> <img id="silly" src="silly.jpg"> </div>
+    
+    <blockquote id='quote' style='border:1px dotted #444; height:20px;'>
+      So many things happen for every event, 
+      and if you try to manipulate it, 
+      it means you are struggling against 
+      the whole universe, and that's just silly.
+    </blockquote>
+    
+    <script>
+      var myquote = " So many things happen for every event, and if you try to manipulate it, it means you are struggling against the whole universe, and that's just silly."
+      $('#smilep').prepend('Give me a smile: ')
+      $('#smile').click(function() { $('#smilep').append("<img src='happy.jpg'>") }  )   
+    
+      $('#rem_s').click(function() { $('#silly').remove() } )
+      $('#add_s').click(function() { $('#mydiv').append("<img id='silly' src='silly.jpg'>")  } )
+    
+      $('#quote').before('<hr>').after('<hr>')
+      $('#rem_q').click(function() { $('#quote').empty() } )
+      $('#add_q').click(function() { $('#quote').append(myquote)  } )
+    
+    </script>
+  </body>
+</html>
