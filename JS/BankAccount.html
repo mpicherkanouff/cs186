@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Bank Accounts</title>
+	<link href="TwoColumnsFixIE.css" rel="stylesheet" type="text/css">
+	
+	<script>
+		var myObjArray = new Array();
+		
+		function account (newAccountNumber, newBalance) {
+			this.accountNumber = newAccountNumber;	//attribute
+			this.balance = newBalance;				//attribute
+			this.deposit = deposit; 				//behavior
+			this.withdrawal = withdrawal;			//behavior
+		}//constructs a bank object
+		
+		function deposit(theValue) {
+			this.balance += theValue;
+			//return this.balance;
+		}//deposit method
+		
+		function withdrawal(theValue) {
+			this.balance -= theValue;
+			//return this.balance;
+		}//withdrawal method
+		
+		function CreateAccount() {
+			yourAccountNumber = document.getElementById("accNumber").value;
+			yourBalance = parseInt(document.getElementById("amount").value);
+		
+			// myObjArray will contain objs account 
+			// Associative array    
+			myObjArray[yourAccountNumber] = new account(yourAccountNumber, yourBalance);
+		    yourAccount = myObjArray[yourAccountNumber];
+		
+			document.getElementById("textArea").value = ' Account Num: ' + yourAccount.accountNumber +
+			' Balance: ' + yourAccount.balance;	
+		}
+		
+		function Deposit() {
+			yourAccountNumber = document.getElementById("accNumber").value;
+			yourAccount = myObjArray [yourAccountNumber]; 
+			
+			depValue = parseInt(document.getElementById("amount").value);
+			yourAccount.deposit(depValue);
+			
+			document.getElementById("textArea").value = ' Account Num: ' + yourAccount.accountNumber +
+			         ' Balance: ' + yourAccount.balance;	
+		}	
+		
+		function Withdraw () {
+			yourAccountNumber = document.getElementById("accNumber").value;
+			yourAccount = myObjArray [yourAccountNumber]; 
+			
+			withValue = parseInt(document.getElementById("amount").value);
+			yourAccount.withdrawal(withValue);
+			document.getElementById("textArea").value = ' Account Num: ' + yourAccount.accountNumber +
+			         ' Balance: ' + yourAccount.balance;	
+		}
+
+	</script>
+</head>
+<body>
+<div id="body_box">
+	<div id="header">
+		<h1> My Bank </h1>
+		
+	</div>
+	
+	<div id="nav_box">
+		<h3> This area is for output </h3>
+		<form id="form1">		
+			<br>Your current balance is: 
+  			<br>
+  			<textarea id="textArea" rows="3" cols="50"></textarea>	
+	 	</form>
+	</div>
+	<div id="content_box">
+		<h2>User Information </h2>
+		<h3>Enter the information before asking the bank to do a transaction </h3>
+		<form id="form2" action="" >
+			<br>
+			<input type = "text"  id = "accNumber"> Account Number:<br><br>     			
+  			<input type = "text"  id = "amount"> 
+  			$$ Amount (initial balance, amount deposit or withdraw)  <br><br>     			    			
+		</form>
+	
+	</div>
+	<div id="footer_box">
+	
+		<form id="form3" >
+			<input type="button" value="Create Account" onclick="CreateAccount();" >
+			<input type="button" value="Deposit Money"	onclick="Deposit();" >
+			<input type="button" value="Withdraw Money" onclick="Withdraw();" >
+		</form>
+	</div>
+	
+	
+	
+</div>
+
+</body>
+</html>

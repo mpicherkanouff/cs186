@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script>
-            function insert_hr(x) {
-                var newElement = document.createElement("hr");  // creats a new object
-                var destParent = document.getElementsByTagName("div")[x];
-                destParent.insertBefore(newElement, destParent.firstChild);
-            }
+<head>
+    <script>
+        function insert_hr(x) {
+            var newElement = document.createElement("hr");  // creats a new object
+            var destParent = document.getElementsByTagName("div")[x];
+            destParent.insertBefore(newElement, destParent.firstChild);
+            // ctrl-shift-i in Chrome
+        }
+        
+         function insert_new_text(){
+            var myText = document.createTextNode("Macarena!!!");
+            var textdiv = document.getElementsByTagName("div")[2];
+            var brElement = document.createElement("br");
             
-             function insert_new_text(){
-                var myText = document.createTextNode("Macarena!!!");
-                var textdiv = document.getElementsByTagName("div")[2];
-                var brElement = document.createElement("br");
-                
-                textdiv.appendChild(myText);
-                textdiv.appendChild(brElement);
-            }
-            
-            function delete_text() {
-                var mynode = document.getElementsByTagName('div')[2]; 
-                     
-                while (mynode.firstChild) 
-                    mynode.removeChild(mynode.firstChild);
-            }
-        </script>
-    </head>
+            textdiv.appendChild(myText);
+            textdiv.appendChild(brElement);
+        }
+        
+        function delete_text() {
+            var mynode = document.getElementsByTagName('div')[2]; 
+                 
+            while (mynode.firstChild) 
+                mynode.removeChild(mynode.firstChild);
+        }
+    </script>
+</head>
+
+<body style="background-color:powderblue;" >
+    <div> </div>
+   
+    <input  type="button"   
+            value= "Insert horizontal lines above" 
+            onClick=" insert_hr(0); ">
     
-    <body style="background-color:powderblue;" >
-        <div> </div>
-       
-        <input  type="button"   
-                value= "Insert horizontal lines above" 
-                onClick=" insert_hr(0); ">
-        
-        <input  type="button"   
-                value= "Insert horizontal lines below" 
-                onClick=" insert_hr(1); ">        
-         
-        <input  type="button"   
-                value= "Insert new text" 
-                onClick=" insert_new_text(); ">        
-        
-        <input  type="button" 
-                value="Delete Text Children"
-                onclick="delete_text();  ">
-           
-        <div>  </div>
-        <div>  </div>
+    <input  type="button"   
+            value= "Insert horizontal lines below" 
+            onClick=" insert_hr(1); ">        
      
-    </body> 
-    </body> 
+    <input  type="button"   
+            value= "Insert new text" 
+            onClick=" insert_new_text(); ">        
+    
+    <input  type="button" 
+            value="Delete Text Children"
+            onclick="delete_text();  ">
+       
+    <div>  </div>
+    <div>  </div>
+ 
+</body> 
+</body> 
 </html>

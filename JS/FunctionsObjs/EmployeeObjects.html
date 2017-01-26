@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects in JS </title>
+
+	<script language="javascript">
+
+		//define employee object
+		function employee (name,department) {
+			this.name = name;   			//property
+			this.department = department;	//property
+		}
+
+		// A manager is a type of employee 
+		//define manager object
+		function manager (team, employee) {
+			this.team = team;					//property
+			this.employee = employee;  	        //nested object
+			
+		}
+	</script>
+</head>
+
+<body>
+	<script>   
+	    //Create employee and manager instances  
+		salesEmployee = new employee ("Mike", "sales");
+		salesManager = new manager(10, salesEmployee);
+
+		//write properties of the objects
+		document.write("My Object Properties: <br>"); 
+		document.write(salesManager.employee.name + " working in ");  
+		document.write(salesManager.employee.department + ", team number: ");
+		document.write(salesManager.team + " "); 
+		
+	</script> 	
+
+</body>
+</html>

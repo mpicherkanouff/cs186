@@ -30,18 +30,16 @@
         <input type="button" 
            value="Click Here"            
            onClick=" 
-           year = document.getElementById('age').value;
-           year = parseFloat(year);     
-           year = DoMath(year);
+           age = document.getElementById('age').value;
+           age = parseFloat(age);     
+           year = DoMath(age);
            
            name =  document.getElementById('name').value;
            document.getElementById('PlaceHolder').innerHTML = 
            
                 'Hello there ' + name + ' was born between' + (year -1) + ' and ' + year ;
           " > 
-        
-           
-	
+ 
 	    <hr> 	   
         <div id="PlaceHolder">    </div> 
          

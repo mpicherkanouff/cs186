@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creating Prototype Objs </title>
+		<script language="javascript">
+
+			//define employee object
+			// same as before
+			function employee (name,department) {
+				this.name = name;			    //property
+				this.department = department;	//property
+			}
+
+			//define manager object
+			function manager (team) {
+				this.team = team;	                   //property
+				manager.prototype = new employee;      // a manager is a type of emplyee 
+			
+			}
+		</script>
+		
+	<body>
+		<script>	
+	        //Create manager objects
+ 			salesManager = new manager(10);
+
+			//assign attribute (property) values to manager instance
+			salesManager.name="Mike";       // doesn’t need  
+					                        // salesManager.employee.name 				
+			salesManager.department = "sales";
+
+			//write properties of the objects
+			document.write("My Object Properties: <br>"); 
+			document.write(salesManager.name + " works in ");  
+			document.write(salesManager.department + ", team number: ");
+			document.write(salesManager.team + " "); 
+		</script>
+
+	</body>
+</html>

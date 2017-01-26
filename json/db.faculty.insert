@@ -1,0 +1,19 @@
+db.faculty.insert{
+[   
+
+   {
+    name: "Almudena" ,
+    specialty: "networks"
+   },
+   
+   {
+    name: "Susan" ,
+    specialty: "algorithms"
+   },
+   
+   {
+    name: "Ellen" ,
+    specialty: "information retrieval"
+   },
+] }
+

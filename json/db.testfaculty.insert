@@ -1,0 +1,14 @@
+db.testfaculty.insert(
+[   
+   {
+    name: "Susan" ,
+    specialty: "algorithms"
+   },
+   
+   {
+    name: "Ellen" ,
+    specialty: "information retrieval"
+   }
+] 
+)
+

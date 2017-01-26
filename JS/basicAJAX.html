@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <script>
+    function loadFile() {
+      var count = 0;  // allow us to know what gets print first
+      // create request obj
+      var xhttp = new XMLHttpRequest();
+      
+      // onreadystatechange function is called 
+      // when readyState changes
+      xhttp.onreadystatechange = function() {
+            // readyState 4: request finished and response is ready
+            // status	200: "OK"
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("testing").innerHTML =  this + " " + this.readyState +" " + count;
+                document.getElementById("mytext").innerHTML = this.responseText;
+                count ++;
+           }
+        };
+      
+      xhttp.open("GET", "../json/data.json", true);
+      // try running code asynchronously  
+      //xhttp.open("GET", "../json/data.json", false);
+        
+      xhttp.send();
+    
+      // asyn = true in case the request takes too long, not in this case  
+      document.getElementById("moretext").innerHTML = "No need to wait " + count;
+      count ++; 
+    }
+</script>
+  
+</head>
+
 <body>
 
 <h1>The XMLHttpRequest Object</h1>
 
 <p id="mytext">AJAX</p>
 
-<p id="moretext">   </p>
-
 <button type="button" onclick="loadFile()"> Read File</button>
 
-<script>
-function loadFile() {
-  var xhttp = new XMLHttpRequest();
-  
-  // onreadystatechange function is called ehen readyState changes
-  xhttp.onreadystatechange = function() {
-        // readyState 4: request finished and response is ready
-        // status	200: "OK"
-        if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("mytext").innerHTML = this.responseText;
-       }
-    };
-  
-  xhttp.open("GET", "../json/data.json", true);
-  xhttp.send();
+<div id="testing">   </div>
 
-  // asyn = true in case the request takes too long, not in this case  
-  document.getElementById("moretext").innerHTML = "No need to wait";
-}
-</script>
+<div id="moretext">   </div>
 
 </body>
 </html>

@@ -1,0 +1,78 @@
+/* TWO COLUMNS LAYOUT */
+/* ##############Default  body class ####################*/
+body {
+	text-align:center; /* IE6 needs this to center the layout in the browser window */
+	background-color:#FFF;
+}
+
+hr {
+	size: 3em;
+	width: 960px;
+	color: red;
+}
+/****************************** Layout Boxes ********************************/	
+
+#body_box {
+	background-color:#FFF;
+	width:960px;  /* fix width is fixed design */ /* fluid designs uses % */
+	margin-left:auto;  /* centers layout in FX  browser */
+	margin-right:auto; /* centers layout in FX browser */
+	text-align:left;
+	}
+#header_box {
+	 background-color:#BFBF60;
+	 text-align: center;
+	 /* padding-top: 0.25px; */
+	}
+	
+	
+#nav_box {
+	position: relative; /* realtive to natural position. So you can position other elements inside this box */
+	background-color: #CCCC8F; 
+	width: 160px; /* this width + content width must total 100% */	
+	float:left; 
+	min-height: 300px;	
+	/* padding-left: 10px; */
+}
+	
+#content_box {
+	position:relative;
+	/* left: 160px; */
+	float: right;
+	background-color: red; /*#E6E6CF; */ 
+	min-height: 300px;
+	width: 800px;
+	
+}
+
+#footer_box {
+	background-color:#BFBF60;
+	clear: both;
+	/* padding:.5em 1em; /* remember em is relative to current font size */
+	text-align: center;
+	}
+/* ******************************************************************************** 	
+
+
+
+/* Elements */ 	
+#e1 { 
+	position: absolute; /* position absolute relative to content-box */
+	top: 20px;
+	left: 30px;
+	z-index: 1;
+}
+#e2 { 
+	position: absolute;
+	z-index: 2;
+	top: 50px;
+	left: 135px;
+}
+#e3 { 
+	position: absolute;
+	z-index: 3;
+	top: 15px;
+	left: 200px;
+}
+
+
