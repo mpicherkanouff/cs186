@@ -1,6 +1,6 @@
 var child_process = require('child_process');
 
-console.log('About to call fibonacci');
+console.log('initiating code');
 
 var newProcess = child_process.spawn('node', ['fibnonblocking.js'], {
     stdio: 'inherit' //to share console log of the parent process 
